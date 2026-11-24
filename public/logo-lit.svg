@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 220" role="img" aria-label="LIT STORE">
+  <rect width="300" height="220" fill="#0a0a0b"/>
+  <g fill="#f3efe7">
+    <path d="M44 38h30v104h58v30H44z"/>
+    <path d="M148 38h30v134h-30z"/>
+    <path d="M190 38h76v30h-23v104h-30V68h-23z"/>
+  </g>
+  <text x="150" y="200" fill="#f3efe7" font-family="Arial Narrow, Arial, sans-serif" font-size="26" letter-spacing="14" text-anchor="middle">STORE</text>
+</svg>

@@ -1,0 +1,49 @@
+﻿
+> lit-store@1.0.0 dev
+> next dev
+
+   ▲ Next.js 15.1.6
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.2:3000
+
+ ✓ Starting...
+ ✓ Ready in 1745ms
+ ○ Compiling / ...
+ ✓ Compiled / in 5.2s (1408 modules)
+ GET / 200 in 7235ms
+ GET / 200 in 57ms
+ GET / 200 in 63ms
+ ○ Compiling /produtos ...
+ ✓ Compiled /produtos in 756ms (1400 modules)
+ GET / 200 in 2733ms
+ GET /produtos 200 in 3629ms
+ GET /produtos 200 in 19ms
+ GET /produtos?categoria=Bon%C3%A9s 200 in 20ms
+ GET / 200 in 96ms
+ GET /produtos 200 in 33ms
+ GET /produtos 200 in 18ms
+ ✓ Compiled in 924ms (1400 modules)
+ GET /produtos 200 in 180ms
+ GET / 200 in 158ms
+ ✓ Compiled in 1018ms (1400 modules)
+ GET / 200 in 2840ms
+ GET / 200 in 112ms
+node.exe :  ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+No linha:1 caractere:1
++ & "C:\Users\dudum\AppData\Roaming\fnm\aliases\default/node.exe" "C:\U ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ( ⚠ Fast Refresh... runtime error.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+ ✓ Compiled in 1938ms (1400 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET / 200 in 456ms
+ GET / 200 in 55ms
+ ✓ Compiled in 1503ms (1400 modules)
+ GET / 200 in 96ms
+ GET / 200 in 88ms
+ GET /produtos 200 in 1302ms
+ GET /produtos 200 in 13ms
+ ✓ Compiled in 870ms (1400 modules)
+ GET /produtos 200 in 70ms
+ GET / 200 in 79ms

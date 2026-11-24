@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0a0a0b;
+  --color-ink-2: #121214;
+  --color-ink-3: #1b1b1e;
+  --color-bone: #f3efe7;
+  --color-bone-dim: #a8a299;
+  --color-bronze: #c0864a;
+  --color-bronze-bright: #e3ab6c;
+  --font-display: var(--font-anton), "Arial Narrow", sans-serif;
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+  --edge: color-mix(in oklab, #f3efe7 12%, transparent);
+}
+
+* {
+  border-color: var(--edge);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-bone);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-bronze);
+  color: #0a0a0b;
+}
+
+/* Tipografia display */
+.display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  line-height: 0.85;
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  font-size: 0.6875rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-bronze);
+  font-weight: 600;
+}
+
+/* Foco visível em tudo */
+:focus-visible {
+  outline: 2px solid var(--color-bronze-bright);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0b;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2e;
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-bronze);
+}
+
+/* Marquee */
+@keyframes lit-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.marquee-track {
+  animation: lit-marquee var(--dur, 34s) linear infinite;
+  will-change: transform;
+}
+.marquee-pause:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Grão sutil de fundo */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Scroll suave de âncoras quando o usuário prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .marquee-track {
+    animation: none !important;
+  }
+}
+
+/* Esconder scrollbar em carrosséis */
+.no-bar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-bar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cursor custom só no desktop com ponteiro fino */
+@media (hover: hover) and (pointer: fine) {
+  .cursor-host,
+  .cursor-host a,
+  .cursor-host button {
+    cursor: none;
+  }
+}
