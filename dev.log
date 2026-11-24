@@ -47,3 +47,37 @@ No linha:1 caractere:1
  ✓ Compiled in 870ms (1400 modules)
  GET /produtos 200 in 70ms
  GET / 200 in 79ms
+ ⨯ ./node_modules/next/dist/lib/metadata/metadata-boundary.js
+Error: ENOENT: no such file or directory, open 
+'C:\Users\dudum\Documents\lit-store\node_modules\next\dist\lib\metadata\metadata-boundary.js'
+
+Import trace for requested module:
+./node_modules/next/dist/lib/metadata/metadata-boundary.js
+ ⨯ ./node_modules/next/dist/lib/require-instrumentation-client.js:11:1
+Module not found: Can't resolve 'private-next-instrumentation-client'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/next/dist/client/app-next-dev.js
+ ⨯ ./node_modules/next/dist/lib/require-instrumentation-client.js:11:1
+Module not found: Can't resolve 'private-next-instrumentation-client'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/next/dist/client/app-next-dev.js
+ ⨯ ./node_modules/next/dist/lib/require-instrumentation-client.js:11:1
+Module not found: Can't resolve 'private-next-instrumentation-client'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/next/dist/client/app-next-dev.js
+ ⨯ ./node_modules/next/dist/lib/require-instrumentation-client.js:11:1
+Module not found: Can't resolve 'private-next-instrumentation-client'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./node_modules/next/dist/client/app-next-dev.js

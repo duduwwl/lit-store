@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+﻿import type { Metadata, Viewport } from "next";
 import { Anton, Archivo } from "next/font/google";
 import "./globals.css";
 import { site } from "@/data/site";
@@ -7,6 +7,8 @@ import { CustomCursor } from "@/components/CustomCursor";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+
+const SITE_URL = "https://lit-store-khaki.vercel.app";
 
 const anton = Anton({
   weight: "400",
@@ -21,12 +23,11 @@ const archivo = Archivo({
   display: "swap",
 });
 
+const TITULO = "LIT STORE | Moda Masculina Multimarcas em Três Corações";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lit-store.vercel.app"),
-  title: {
-    default: "LIT STORE | Moda Masculina Multimarcas em Três Corações",
-    template: "%s | LIT STORE",
-  },
+  metadataBase: new URL(SITE_URL),
+  title: { default: TITULO, template: "%s | LIT STORE" },
   description: site.descricao,
   keywords: [
     "moda masculina Três Corações",
@@ -41,15 +42,22 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://lit-store.vercel.app",
+    url: SITE_URL,
     siteName: "LIT STORE",
-    title: "LIT STORE | Moda Masculina Multimarcas em Três Corações",
+    title: TITULO,
     description: site.descricao,
-    images: [{ url: "/images/produtos/polo-reserva-areia-1.jpg", width: 1500, height: 1500, alt: "LIT STORE" }],
+    images: [
+      {
+        url: "/images/produtos/polo-reserva-areia-1.jpg",
+        width: 1500,
+        height: 1500,
+        alt: "Peças da LIT STORE",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "LIT STORE | Moda Masculina Multimarcas em Três Corações",
+    title: TITULO,
     description: site.descricao,
     images: ["/images/produtos/polo-reserva-areia-1.jpg"],
   },
@@ -66,8 +74,8 @@ const jsonLd = {
   "@type": "ClothingStore",
   name: "LIT STORE",
   description: site.descricao,
-  image: "https://lit-store.vercel.app/images/produtos/polo-reserva-areia-1.jpg",
-  url: "https://lit-store.vercel.app",
+  image: `${SITE_URL}/images/produtos/polo-reserva-areia-1.jpg`,
+  url: SITE_URL,
   address: {
     "@type": "PostalAddress",
     streetAddress: site.endereco.rua,
